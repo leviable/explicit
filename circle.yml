@@ -1,0 +1,21 @@
+machine:
+  python:
+    version: '3.4.4'
+  environment:
+    PY_VERSIONS: '2.7.11 3.3.6 3.4.4 3.5.1 pypy-2.6.1'
+
+dependencies:
+  override:
+    - pip -V
+    - pip install -U pip
+    - pip install -U tox
+    - pip install -U python-coveralls
+    - pyenv local $PY_VERSIONS
+
+test:
+  override:
+    - tox -v --recreate
+  post:
+    - coveralls
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit
+    - find . -type f -regextype posix-extended -regex ".*coverage.xml|.*junit.xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
