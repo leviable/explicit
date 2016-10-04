@@ -1,8 +1,16 @@
 '''
 explicit setup
 '''
+from os import path
+
 import versioneer
 from setuptools import setup, find_packages
+
+here = path.abspath(path.dirname(__file__))
+
+# Get the long description from the README file
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 install_requires = ['versioneer', ]
 
@@ -16,6 +24,7 @@ setup(
     keywords=['selenium', 'explicit', 'wait', 'implicit'],
     packages=find_packages(),
     description='Easy explicit wait helpers for Selenium',
+    long_description=long_description,
     install_requires=install_requires,
     tests_require=[
         'mock',
