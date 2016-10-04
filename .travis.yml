@@ -28,10 +28,10 @@ after_success:
 
 deploy:
     provider: pypi
-    server: https://testpypi.python.org/pypi
+    server: https://pypi.python.org/pypi
     user: $PYPI_USERNAME
     password: $PYPI_PASSWORD
     on:
-        branch: deploy-test
+        branch: master
         tags: true
         python: '3.4'
