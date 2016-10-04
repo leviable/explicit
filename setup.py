@@ -6,7 +6,7 @@ from os import path
 import versioneer
 from setuptools import setup, find_packages
 
-here = path.abspath(path.dirname(__file__))
+here = path.dirname(path.abspath(__file__))
 
 # Get the long description from the README file
 with open(path.join(here, 'README.md')) as f:
@@ -24,6 +24,7 @@ setup(
     keywords=['selenium', 'explicit', 'wait', 'implicit'],
     packages=find_packages(),
     description='Easy explicit wait helpers for Selenium',
+    license='MIT',
     long_description=long_description,
     install_requires=install_requires,
     tests_require=[

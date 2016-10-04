@@ -21,7 +21,8 @@ install:
   - pip install python-coveralls
   - pip install coverage
 
-script: tox -v --recreate
+script:
+  - tox -v --recreate
 
 after_success:
   - coveralls
