@@ -3,32 +3,35 @@ language: python
 sudo: false
 
 os:
-- linux
+  - linux
 
 python:
-- '2.6'
-- '2.7'
-- '3.3'
-- '3.4'
-- '3.5'
-- '3.6'
-- pypy
-- pypy3
+  - '2.6'
+  - '2.7'
+  - '3.3'
+  - '3.4'
+  - '3.5'
+  - '3.6'
+  - pypy
+  - pypy3
 
 install:
-- pip install -U pip
-- pip install -U tox-travis
-- pip install coveralls
-- pip install coverage
+  - pip install -U pip
+  - pip install -U tox-travis
+  - pip install python-coveralls
+  - pip install coverage
 
 script: tox -v --recreate
 
+after_success:
+  - coveralls
+
 deploy:
-  provider: pypi
-  server: https://testpypi.python.org/pypi
-  user: $PYPI_USERNAME
-  password: $PYPI_PASSWORD
-  on:
-    branch: deploy-test
-    tags: true
-    python: '3.4'
+    provider: pypi
+    server: https://testpypi.python.org/pypi
+    user: $PYPI_USERNAME
+    password: $PYPI_PASSWORD
+    on:
+        branch: deploy-test
+        tags: true
+        python: '3.4'
