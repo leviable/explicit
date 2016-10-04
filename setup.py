@@ -1,21 +1,15 @@
 '''
 explicit setup
 '''
-import sys
+import versioneer
 from setuptools import setup, find_packages
 
-install_requires = []
-
-py_version = sys.version_info[:3]
-
-# # argparse and futures were only added after 3.x
-# if py_version < (3,):
-#     install_requires += ['argparse', 'futures']
-
+install_requires = ['versioneer', ]
 
 setup(
     name='explicit',
-    version='0.0.1',
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     author='Levi Noecker',
     author_email='levi.noecker@gmail.com',
     url='https://github.com/levi-rs/explicit',
@@ -29,7 +23,10 @@ setup(
     classifiers=[
         'Operating System :: MacOS :: MacOS X',
         'Operating System :: POSIX :: Linux',
-        'Programming Language :: Python :: 3.x',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: Implementation :: CPython',
