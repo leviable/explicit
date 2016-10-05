@@ -1,0 +1,3 @@
+ignore-paths:
+  - versioneer.py
+  - explicit/_version.py
