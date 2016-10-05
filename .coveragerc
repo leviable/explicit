@@ -1,0 +1,2 @@
+[run]
+omit = explicit/_version.py

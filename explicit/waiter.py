@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-WAIT_TIMEOUT = 30
+TIMEOUT = 30
 """ int: Default timeout value, in seconds"""
 
 CSS = By.CSS_SELECTOR
