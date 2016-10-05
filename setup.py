@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 here = path.dirname(path.abspath(__file__))
 
 # Get the long description from the README file
-with open(path.join(here, 'README.md')) as f:
+with open(path.join(here, 'README.rst')) as f:
     long_description = f.read()
 
 install_requires = ['versioneer', ]
