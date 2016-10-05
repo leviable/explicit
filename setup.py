@@ -12,7 +12,7 @@ here = path.dirname(path.abspath(__file__))
 with open(path.join(here, 'README.rst')) as f:
     long_description = f.read()
 
-install_requires = ['versioneer', ]
+install_requires = ['selenium']
 
 setup(
     name='explicit',
