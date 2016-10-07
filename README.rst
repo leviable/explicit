@@ -1,6 +1,10 @@
 explicit
 ========
 
+.. image:: https://badges.gitter.im/levi-rs/explicit.svg
+   :alt: Join the chat at https://gitter.im/levi-rs/explicit
+   :target: https://gitter.im/levi-rs/explicit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
 |PyPIVersion| |TravisCI| |CoverageStatus| |CodeHealth| |StoriesInReady| |PythonVersions|
 
 Helper class to make working with Selenium explicit waits easier and
