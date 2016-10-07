@@ -1,7 +1,7 @@
 explicit
 ========
 
-|PyPIVersion| |TravisCI| |CoverageStatus| |CodeHealth| |StoriesInReady| |PythonVersions|
+|PyPIVersion| |TravisCI| |CoverageStatus| |CodeHealth| |StoriesInReady| |PythonVersions| |Gitter|
 
 Helper class to make working with Selenium explicit waits easier and
 more accessible
@@ -18,7 +18,9 @@ more accessible
     :target: https://badge.fury.io/py/explicit
 .. |PythonVersions| image:: https://img.shields.io/pypi/pyversions/explicit.svg
     :target: https://wiki.python.org/moin/Python2orPython3
-
+.. |Gitter| image:: https://badges.gitter.im/levi-rs/explicit.svg
+    :alt: Join the chat at https://gitter.im/levi-rs/explicit
+    :target: https://gitter.im/levi-rs/explicit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
 Explicit is designed to minimize or eleminate the common frustrations encountered when using
 Selenium on webpages with dynamicly loaded and/or javascript driven content. Typically, a developer
