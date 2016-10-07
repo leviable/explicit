@@ -53,7 +53,7 @@ in the login credentials and click the login button:
 
         password_field = driver.find_element_by_id("password")
         password_field.click()
-        password_field.send_keys("my_username")
+        password_field.send_keys("my_password")
 
         login_button = driver.find_element_by_css_selector("input.btn-primary")
         login_button.click()
