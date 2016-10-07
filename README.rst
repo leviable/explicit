@@ -1,7 +1,7 @@
 explicit
 ========
 
-|Travis-CI| |Coverage Status| |Code Health| |Stories in Ready|
+|PyPI Version| |Travis-CI| |Coverage Status| |Code Health| |Stories in Ready| |Python Versions|
 
 Helper class to make working with Selenium explicit waits easier and
 more accessible
@@ -14,3 +14,7 @@ more accessible
    :target: https://landscape.io/github/levi-rs/explicit/master
 .. |Stories in Ready| image:: https://badge.waffle.io/levi-rs/explicit.svg?label=ready&title=Ready
    :target: http://waffle.io/levi-rs/explicit
+.. |PyPI Version| image:: https://badge.fury.io/py/explicit.svg
+    :target: https://badge.fury.io/py/explicit
+.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/explicit.svg
+    :target: https://wiki.python.org/moin/Python2orPython3
