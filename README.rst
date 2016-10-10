@@ -110,3 +110,23 @@ Explicit easily solves this by waiting for the element to load in:
         login_button.click()
     finally:
         driver.quit()
+
+Additionally, you can use explicit to handle the writing:
+
+.. code-block:: python
+
+    from explicit import waiter
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+
+    driver = webdriver.Chrome()
+
+    try:
+        driver.get("https://github.com/this/doesntexist")
+
+        waiter.find_write(driver, "login_field", "my_username", by=By.ID)
+
+        waiter.find_write(driver, "password", "my_password", by=By.ID, send_enter=True)
+
+    finally:
+        driver.quit()
