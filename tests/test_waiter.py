@@ -44,6 +44,41 @@ def test_find_element_with_non_defaults(driver, element):
                                                   mock.call(By.XPATH, mock_xpath_path)]
 
 
+def test_find_elements_with_defaults(driver, element):
+    """ Verify the waiter can find and return all elements
+    """
+    mock_css_path = "div.mock-css-path"
+
+    driver.find_elements.side_effect = [None, [element, element]]
+
+    elem_list = waiter.find_elements(driver, mock_css_path)
+
+    assert driver.find_elements.called
+    assert isinstance(elem_list, list)
+    assert all(map(lambda x: x is element, elem_list))
+    assert len(driver.mock_calls) == 2
+    assert driver.find_elements.call_args_list == [mock.call(CSS, mock_css_path),
+                                                   mock.call(CSS, mock_css_path)]
+
+
+def test_find_elements_with_non_defaults(driver, element):
+    """ Verify the waiter can find and return all elements when using
+        non-default kwargs
+    """
+    mock_xpath_path = "div[@id=mock-id]"
+
+    driver.find_elements.side_effect = [None, [element, element]]
+
+    elem_list = waiter.find_elements(driver, mock_xpath_path, by=By.XPATH)
+
+    assert driver.find_elements.called
+    assert isinstance(elem_list, list)
+    assert all(map(lambda x: x is element, elem_list))
+    assert len(driver.mock_calls) == 2
+    assert driver.find_elements.call_args_list == [mock.call(By.XPATH, mock_xpath_path),
+                                                   mock.call(By.XPATH, mock_xpath_path)]
+
+
 def test_find_write_with_defaults(driver, element):
     """ Verify the waiter can find and write to an element, using
         default kwargs
