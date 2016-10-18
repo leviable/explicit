@@ -1,6 +1,8 @@
 explicit
 ========
 
+.. image:: https://img.shields.io/github/downloads/atom/atom/total.svg   :target: https://github.com/levi-rs/explicit
+
 |PyPIVersion| |TravisCI| |CoverageStatus| |CodeHealth| |StoriesInReady| |PythonVersions| |Gitter|
 
 Helper class to make working with Selenium explicit waits easier and
