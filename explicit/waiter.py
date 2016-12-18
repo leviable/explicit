@@ -6,16 +6,14 @@ explicit wait functionality easier.
 
 """
 
-from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from explicit import CSS
+
 TIMEOUT = 30
 """ int: Default timeout value, in seconds"""
-
-CSS = By.CSS_SELECTOR
-""" By: Default Selenium search type (CSS Selector)"""
 
 
 def find_element(driver, elem_path, by=CSS, timeout=TIMEOUT, poll_frequency=0.5):
