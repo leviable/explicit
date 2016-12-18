@@ -1,38 +1,33 @@
 language: python
-
 sudo: false
-
 os:
-  - linux
-
+- linux
 python:
-  - '2.6'
-  - '2.7'
-  - '3.3'
-  - '3.4'
-  - '3.5'
-  - '3.6.0b1'
-  - pypy
-  - pypy3
-
+- '2.6'
+- '2.7'
+- '3.3'
+- '3.4'
+- '3.5'
+- 3.6.0b1
+- pypy
+- pypy3
 install:
-  - pip install -U pip
-  - pip install -U tox-travis
-  - pip install python-coveralls
-  - pip install coverage
-
+- pip install -U pip
+- pip install -U tox-travis
+- pip install python-coveralls
+- pip install coverage
 script:
-  - tox -v --recreate
-
+- tox -v --recreate
 after_success:
-  - coveralls
-
+- coveralls
 deploy:
-    provider: pypi
-    server: https://pypi.python.org/pypi
-    user: $PYPI_USERNAME
-    password: $PYPI_PASSWORD
-    on:
-        branch: master
-        tags: true
-        python: '3.4'
+  provider: pypi
+  server: https://pypi.python.org/pypi
+  user: levinoecker
+  password:
+    secure: CCH8AK+Xg1OihHYv/xqVIs7aJ0AraGM2ecovbdU/5Vzt1hUArBU3YTC26C+oOeC7wxuP7D/yNPeww7uqpFj1GgT9NeDCQMyCSorWQe7nOWjr+v9DSAgGJh825yGxp1mF/AXgJyYCMaGEK4CHTdc8d7PHvnhxggEVcE/QZsbOruUaRsZLq/Nv1hAWQRAh8nS9neh5E1mshehVdaEBRH9dMbygHNYI8aHbHgpymC4tZBqvuHAi7Tt/lEAbUByT+s2x6zxmkEFJCoy6hNBRSKM49aIMbroH//e+fZdzApKMOTi6FLMEvGkRyykiGoaRWKYLuHZ3Doe0lSiu5QrM3spQkTn6UKrLm1334THDb6NGTFqfBXOBo7pcv7C1k3WhrGgQ7P2AqzhJCrbyMjgYu+6PyYuc3arGqsmZnfUjMdFg/kxGNLTCfxU/QcBU30ae+0BwbyMlNjyLVDUZdDU5DbI2RNwZUxNU+f691rZZgdeAU4wcc6NcIGTfhbPM7R+opz+SqdiuvngrKjQjOldCC/vVa3NrwA/IUkMs27IY8sFMel5YNH2sN5LjTZMJX910vOZLF71SlkSs+onLcn3w3qYIUQPmPKVzMGdVgkSaGvqu8F9sNqlkgQQ092ISDLH8UuIswMsMVud2ibaemUr5z0HyF1ruvq28zAszDfOQxW9d/5A=
+  distributions: sdist bdist_wheel
+  on:
+    branch: master
+    tags: true
+    python: '3.4'
