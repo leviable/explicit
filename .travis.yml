@@ -27,11 +27,14 @@ script:
 after_success:
   - coveralls
 
+before_deploy:
+  - pip install twine
+  - pip install wheel
+  - python setup.py sdist bdist_wheel
+
 deploy:
-    provider: pypi
-    server: https://pypi.python.org/pypi
-    user: $PYPI_USERNAME
-    password: $PYPI_PASSWORD
+    provider: script
+    script: pypi_deploy.sh
     on:
         branch: master
         tags: true
