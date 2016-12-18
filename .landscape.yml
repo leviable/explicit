@@ -1,3 +1,7 @@
 ignore-paths:
   - versioneer.py
   - explicit/_version.py
+
+pylint:
+  disable:
+    - too-many-arguments
