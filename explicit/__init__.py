@@ -1,8 +1,7 @@
+from pbr.version import VersionInfo
 from selenium.webdriver.common.by import By
 
-from ._version import get_versions
-__version__ = get_versions()['version']
-del get_versions
+__version__ = VersionInfo('explicit').semantic_version().release_string()
 
 CLASS_NAME = By.CLASS_NAME
 CSS = By.CSS_SELECTOR

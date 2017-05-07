@@ -1,0 +1,66 @@
+CHANGES
+=======
+
+* Switch to PBR and remove pypy3 support
+
+0.1.0
+-----
+
+* Add find\_one method to waiter
+
+0.0.8
+-----
+
+* Use official Python 3.6 for testing
+* Update README to include by imports
+
+0.0.7
+-----
+
+* Fix PyPI deployment
+* Add importable By types to main package
+
+0.0.6
+-----
+
+* Add find\_elements to waiter
+
+0.0.5
+-----
+
+* Add find\_write to waiter
+* Add Gitter badge
+* Fix copy/paste error
+
+0.0.4
+-----
+
+* Update Development Status Classifier
+* Update README with example
+* Update badges
+
+0.0.3
+-----
+
+* Add find\_element function
+* Add initial find\_element function
+* Add docs dir
+* Convert README from md to rst
+* Fix long description
+* Fix syntax error from copy/paste
+* Add long description
+* Update setup.py classifiers
+* Update README badge
+
+0.0.2
+-----
+
+* Switch .travis.yml to production deployment
+* Try using 3.6.0b1
+* Add \_\_init\_\_ to tests/
+* Update travis.yml
+* Add Versioneer docs
+* Switch to TravisCI
+* Add initial structure
+* Initial commit
+* Initial commit
