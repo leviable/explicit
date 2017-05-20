@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+* Fix bad requirement in requirements.txt
+
+0.1.1
+-----
+
 * Switch to PBR and remove pypy3 support
 
 0.1.0
