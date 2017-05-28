@@ -1,6 +1,9 @@
 CHANGES
 =======
 
+0.1.2
+-----
+
 * Fix bad requirement in requirements.txt
 
 0.1.1
